@@ -1,0 +1,620 @@
+<RaidInfo>
+	<key>03/17/10 14:34:30</key>
+		<start>03/17/10 14:34:30</start>
+		<end>03/17/10 16:51:43</end>
+			<zone>Icecrown Citadel</zone>
+				<PlayerInfos>
+					<key1>
+						<name>Aierus</name>
+						<race>NightElf</race>
+						<guild>Embrace</guild>
+						<sex>3</sex>
+						<class>PRIEST</class>
+						<level>80</level>
+					</key1>
+					<key2>
+						<name>Caerus</name>
+						<race>Human</race>
+						<guild>Embrace</guild>
+						<sex>2</sex>
+						<class>DEATHKNIGHT</class>
+						<level>80</level>
+					</key2>
+					<key3>
+						<name>Gathios</name>
+						<race>NightElf</race>
+						<guild>Embrace</guild>
+						<sex>2</sex>
+						<class>WARRIOR</class>
+						<level>80</level>
+					</key3>
+					<key4>
+						<name>Jarilo</name>
+						<race>Human</race>
+						<guild>Embrace</guild>
+						<sex>3</sex>
+						<class>WARLOCK</class>
+						<level>80</level>
+					</key4>
+					<key5>
+						<name>Krediet</name>
+						<race>Gnome</race>
+						<guild>Embrace</guild>
+						<sex>2</sex>
+						<class>MAGE</class><level>80</level></key5>
+					<key6>
+						<name>Lartira</name>
+						<race>Human</race>
+						<sex>2</sex>
+						<class>PRIEST</class>
+						<level>80</level>
+					</key6>
+					<key7>
+						<name>Lifeleecher</name>
+						<race>Human</race>
+						<guild>Embrace</guild>
+						<sex>2</sex>
+						<class>DEATHKNIGHT</class>
+						<level>80</level>
+					</key7>
+					<key8>
+						<name>Rogziel</name>
+						<race>Human</race>
+						<guild>Embrace</guild>
+						<sex>2</sex>
+						<class>PALADIN</class>
+						<level>80</level>
+					</key8>
+					<key9>
+						<name>Shamyfruen</name>
+						<race>Draenei</race>
+						<guild>Embrace</guild>
+						<sex>3</sex>
+						<class>SHAMAN</class>
+						<level>80</level>
+					</key9>
+					<key10>
+						<name>Slnderous</name>
+						<race>Dwarf</race>
+						<guild>Embrace</guild>
+						<sex>2</sex>
+						<class>WARRIOR</class>
+						<level>80</level>
+					</key10>
+					<key11>
+						<name>Soriana</name>
+						<race>Draenei</race>
+						<guild>Embrace</guild>
+						<sex>3</sex>
+						<class>HUNTER</class>
+						<level>80</level>
+					</key11>
+					<key12>
+						<name>Thoorr</name>
+						<race>Human</race>
+						<guild>Embrace</guild>
+						<sex>2</sex>
+						<class>PALADIN</class>
+						<level>80</level>
+					</key12>
+				</PlayerInfos>
+				<BossKills>
+	<key1>
+		<name>Lord Marrowgar</name>
+		<time>03/17/10 14:51:24</time>
+			<attendees>
+				<key1>
+					<name>Aierus</name>
+				</key1>
+				<key2>
+					<name>Caerus</name>
+				</key2>
+				<key3>
+					<name>Gathios</name>
+				</key3>
+				<key4>
+					<name>Krediet</name>
+				</key4>
+				<key5>
+					<name>Lifeleecher</name>
+				</key5>
+				<key6>
+					<name>Rogziel</name>
+				</key6>
+				<key7>
+					<name>Shamyfruen</name>
+				</key7>
+				<key8>
+					<name>Slnderous</name>
+				</key8>
+				<key9>
+					<name>Soriana</name>
+				</key9>
+				<key10>
+					<name>Thoorr</name>
+				</key10>
+			</attendees>
+	</key1>
+	<key2>
+		<name>Lady Deathwhisper</name>
+		<time>03/17/10 15:03:08</time>
+			<attendees>
+				<key1>
+					<name>Aierus</name>
+				</key1>
+				<key2>
+					<name>Caerus</name>
+				</key2>
+				<key3>
+					<name>Gathios</name>
+				</key3>
+				<key4>
+					<name>Krediet</name>
+				</key4>
+				<key5>
+					<name>Lifeleecher</name>
+				</key5>
+				<key6>
+					<name>Rogziel</name>
+				</key6>
+				<key7>
+					<name>Shamyfruen</name>
+				</key7>
+				<key8>
+					<name>Slnderous</name>
+				</key8>
+				<key9>
+					<name>Soriana</name>
+				</key9>
+				<key10>
+					<name>Thoorr</name>
+				</key10>
+			</attendees>
+	</key2>
+	<key3>
+		<name>Deathbringer Saurfang</name>
+		<time>03/17/10 15:26:54</time>
+			<attendees>
+				<key1>
+					<name>Aierus</name>
+				</key1>
+				<key2>
+					<name>Caerus</name>
+				</key2>
+				<key3>
+					<name>Gathios</name>
+				</key3>
+				<key4>
+					<name>Krediet</name>
+				</key4>
+				<key5>
+					<name>Lifeleecher</name>
+				</key5>
+				<key6>
+					<name>Rogziel</name>
+				</key6>
+				<key7>
+					<name>Shamyfruen</name>
+				</key7>
+				<key8>
+					<name>Slnderous</name>
+				</key8>
+				<key9>
+					<name>Soriana</name>
+				</key9>
+				<key10>
+					<name>Thoorr</name>
+				</key10>
+			</attendees>
+	</key3>
+
+	<key4>
+		<name>Festergut</name>
+		<time>03/17/10 15:53:52</time>
+			<attendees>
+				<key1>
+					<name>Aierus</name>
+				</key1>
+				<key2>
+					<name>Gathios</name>
+				</key2>
+				<key3>
+					<name>Jarilo</name>
+				</key3>
+				<key4>
+					<name>Krediet</name>
+				</key4>
+				<key5>
+					<name>Lifeleecher</name>
+				</key5>
+				<key6>
+					<name>Rogziel</name>
+				</key6>
+				<key7>
+					<name>Shamyfruen</name>
+				</key7>
+				<key8>
+					<name>Slnderous</name>
+				</key8>
+				<key9>
+					<name>Soriana</name>
+				</key9>
+				<key10>
+					<name>Thoorr</name>
+				</key10>
+			</attendees>
+	</key4>
+
+	<key5>
+	<name>Rotface</name>
+		<time>03/17/10 16:39:56</time>
+		<attendees>
+			<key1>
+				<name>Aierus</name>
+			</key1>
+			<key2>
+				<name>Gathios</name>
+			</key2>
+			<key3>
+				<name>Jarilo</name>
+			</key3>
+			<key4>
+				<name>Krediet</name>
+			</key4>
+			<key5>
+				<name>Lifeleecher</name>
+			</key5>
+			<key6>
+				<name>Rogziel</name>
+			</key6>
+			<key7>
+				<name>Shamyfruen</name>
+			</key7>
+			<key8>
+				<name>Slnderous</name>
+			</key8>
+			<key9>
+				<name>Soriana</name>
+			</key9>
+			<key10>
+				<name>Thoorr</name>
+			</key10>
+		</attendees>
+	</key5>
+	</BossKills>
+
+	<note><![CDATA[ - Zone: Icecrown Citadel]]></note>
+		<Join>
+			<key1>
+				<player>Aierus</player>
+				<race>NightElf</race>
+				<class>PRIEST</class>
+				<sex>3</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+				</key1>
+			<key2>
+				<player>Caerus</player>
+				<race>Human</race>
+				<class>DEATHKNIGHT</class>
+				<sex>2</sex>
+				<level>80</level>
+				<time>03/17/10 14:44:55</time>
+			</key2>
+			<key3>
+				<player>Gathios</player>
+				<race>NightElf</race>
+				<class>WARRIOR</class>
+				<sex>2</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key3>
+			<key4>
+				<player>Jarilo</player>
+				<race>Human</race>
+				<class>WARLOCK</class>
+				<sex>3</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key4>
+			<key5>
+				<player>Krediet</player>
+				<race>Gnome</race>
+				<class>MAGE</class>
+				<sex>2</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key5>
+			<key6>
+				<player>Lartira</player>
+				<race>Human</race>
+				<class>PRIEST</class>
+				<sex>2</sex>
+				<level>80</level>
+				<time>03/17/10 16:19:09</time>
+			</key6>
+			<key7>
+				<player>Lifeleecher</player>
+				<race>Human</race>
+				<class>DEATHKNIGHT</class>
+				<sex>2</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key7>
+			<key8>
+				<player>Rogziel</player>
+				<race>Human</race>
+				<class>PALADIN</class>
+				<sex>2</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key8>
+			<key9>
+				<player>Shamyfruen</player>
+				<race>Draenei</race>
+				<class>SHAMAN</class>
+				<sex>3</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key9>
+			<key10>
+				<player>Slnderous</player>
+				<race>Dwarf</race>
+				<class>WARRIOR</class>
+				<sex>2</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key10>
+			<key11>
+				<player>Soriana</player>
+				<race>Draenei</race>
+				<class>HUNTER</class>
+				<sex>3</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key11>
+			<key12>
+				<player>Thoorr</player>
+				<race>Human</race>
+				<class>PALADIN</class>
+				<sex>2</sex>
+				<level>80</level>
+				<time>03/17/10 14:34:30</time>
+			</key12>
+		</Join>
+
+	<Leave>
+		<key1>
+			<player>Aierus</player>
+			<time>03/17/10 16:51:43</time>
+		</key1>
+		<key2>
+			<player>Caerus</player>
+			<time>03/17/10 15:28:57</time>
+		</key2>
+		<key3>
+			<player>Gathios</player>
+			<time>03/17/10 16:51:43</time>
+		</key3>
+		<key4>
+			<player>Jarilo</player>
+			<time>03/17/10 16:51:43</time>
+		</key4>
+		<key5>
+			<player>Krediet</player>
+			<time>03/17/10 16:47:22</time>
+		</key5>
+		<key6>
+			<player>Lartira</player>
+			<time>03/17/10 16:22:20</time>
+		</key6>
+		<key7>
+			<player>Lifeleecher</player>
+			<time>03/17/10 16:49:09</time>
+		</key7>
+		<key8>
+			<player>Rogziel</player>
+			<time>03/17/10 16:51:43</time>
+		</key8>
+		<key9>
+			<player>Shamyfruen</player>
+			<time>03/17/10 16:49:14</time>
+		</key9>
+		<key10>
+			<player>Slnderous</player>
+			<time>03/17/10 16:51:43</time>
+		</key10>
+		<key11>
+			<player>Soriana</player>
+			<time>03/17/10 16:46:04</time>
+		</key11>
+		<key12>
+			<player>Thoorr</player>
+			<time>03/17/10 16:44:56</time>
+		</key12>
+	</Leave>
+
+	<Loot>
+		<key1>
+			<ItemName>Citadel Enforcer's Claymore</ItemName>
+			<ItemID>50761</ItemID>
+			<Icon>inv_sword_153</Icon>
+			<Class>Weapon</Class>
+			<SubClass>Two-Handed Swords</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Caerus</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 14:52:51</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Lord Marrowgar</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Lord Marrowgar - 0 DKP]]></Note>
+		</key1>
+
+		<key2>
+			<ItemName>Coldwraith Bracers</ItemName>
+			<ItemID>50774</ItemID>
+			<Icon>inv_bracer_60</Icon>
+			<Class>Armor</Class>
+			<SubClass>Mail</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchanted</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 14:53:09</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Trash mob</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Trash mob - 0 DKP]]></Note>
+		</key2>
+		<key3>
+			<ItemName>Soulthief's Braided Belt</ItemName>
+			<ItemID>50778</ItemID>
+			<Icon>inv_belt_61</Icon>
+			<Class>Armor</Class>
+			<SubClass>Leather</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchanted</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 15:04:00</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Lady Deathwhisper</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Lady Deathwhisper - 0 DKP]]></Note>
+		</key3>
+		<key4>
+			<ItemName>Deathspeaker Disciple's Belt</ItemName>
+			<ItemID>50784</ItemID>
+			<Icon>inv_belt_83</Icon>
+			<Class>Armor</Class>
+			<SubClass>Mail</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Shamyfruen</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 15:04:56</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Lady Deathwhisper</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Lady Deathwhisper - 0 DKP]]></Note>
+		</key4>
+		<key5>
+			<ItemName>Bone Drake's Enameled Boots</ItemName>
+			<ItemID>50788</ItemID>
+			<Icon>inv_boots_plate_12</Icon>
+			<Class>Armor</Class>
+			<SubClass>Plate</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Slnderous</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 15:16:32</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Gunship Battle</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Gunship Battle - 0 DKP]]></Note>
+		</key5>
+		<key6>
+			<ItemName>Muradin's Spyglass</ItemName>
+			<ItemID>50340</ItemID>
+			<Icon>INV_Misc_Spyglass_02</Icon>
+			<Class>Armor</Class>
+			<SubClass>Miscellaneous</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Shamyfruen</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 15:17:49</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Gun ship Battle</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Gun ship Battle - 0 DKP]]></Note>
+		</key6>
+		<key7>
+			<ItemName>Hauberk of a Thousand Cuts</ItemName>
+			<ItemID>50800</ItemID>
+			<Icon>inv_chest_mail_07</Icon>
+			<Class>Armor</Class>
+			<SubClass>Mail</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Soriana</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 15:28:17</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Deathbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Deathbringer Saurfang - 0 DKP]]></Note>
+		</key7>
+		<key8>
+			<ItemName>Mag'hari Chieftain's Staff</ItemName>
+			<ItemID>50805</ItemID>
+			<Icon>inv_staff_107</Icon>
+			<Class>Weapon</Class>
+			<SubClass>Staves</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchanted</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 15:29:32</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Deathbringer Saurfang</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Deathbringer Saurfang - 0 DKP]]></Note>
+		</key8>
+		<key9>
+			<ItemName>Precious's Putrid Collar</ItemName>
+			<ItemID>50852</ItemID>
+			<Icon>INV_JEWELRY_RING_78</Icon>
+			<Class>Armor</Class>
+			<SubClass>Miscellaneous</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Gathios</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 15:54:37</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Festergut</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Festergut - 0 DKP]]></Note>
+		</key9>
+		<key10>
+			<ItemName>Kilt of Untreated Wounds</ItemName>
+			<ItemID>50990</ItemID>
+			<Icon>inv_pants_cloth_34purple</Icon>
+			<Class>Armor</Class>
+			<SubClass>Cloth</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Aierus</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 15:55:21</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Festergut</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Festergut - 0 DKP]]></Note>
+		</key10>
+		<key11>
+			<ItemName>Gluth's Fetching Knife</ItemName>
+			<ItemID>50999</ItemID>
+			<Icon>inv_throwingknife_01</Icon>
+			<Class>Weapon</Class>
+			<SubClass>Thrown</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Slnderous</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 16:41:01</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Rotface</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Rotface - 0 DKP]]></Note>
+		</key11>
+		<key12>
+			<ItemName>Chestguard of the Failed Experiment</ItemName>
+			<ItemID>51009</ItemID>
+			<Icon>inv_chest_leather_21</Icon>
+			<Class>Armor</Class>
+			<SubClass>Leather</SubClass>
+			<Color>ffa335ee</Color>
+			<Count>1</Count>
+			<Player>Disenchanted</Player>
+			<Costs>0</Costs>
+			<Time>03/17/10 16:41:35</Time>
+			<Zone>Icecrown Citadel</Zone>
+			<Boss>Rotface</Boss>
+			<Note><![CDATA[ - Zone: Icecrown Citadel - Boss: Rotface - 0 DKP]]></Note>
+		</key12>
+	</Loot>
+</RaidInfo>
