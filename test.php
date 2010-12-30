@@ -28,7 +28,7 @@ $dbdatabase     =       'raidtracker';              //mysql database in where th
              }
      }
 
-
+//This function will parse the XML data into a nice big array
 function objectsIntoArray($arrObjData, $arrSkipIndices = array())
 {
     $arrData = array();
@@ -57,10 +57,30 @@ $xmlStr = file_get_contents($xmlUrl);
 $xmlObj = simplexml_load_string($xmlStr);
 $arrXml = objectsIntoArray($xmlObj);
 
+//Making the database connection
 db_connect();
 
-$number_players = count($arrXml['PlayerInfos']);
 
+function timeparser($time)
+{
+   if (($timestamp = strtotime($time)) === false)
+        {
+            echo "The string ($time) is bogus";
+            exit();
+        }
+    else
+        {
+            return date('Y-m-d H:i:s', $timestamp);
+        } 
+}
+
+//Make the general raid_key
+$raid_key = mysql_real_escape_string($arrXml['key']);
+$raid_key = timeparser($raid_key);
+
+//counting the number of players
+$number_players = count($arrXml['PlayerInfos']);
+//Run the for loop
 for($i = 1; $i <= $number_players; $i++)
 {
 
@@ -70,41 +90,38 @@ for($i = 1; $i <= $number_players; $i++)
     $player_sex = mysql_real_escape_string($arrXml['PlayerInfos']['key'.$i]['sex']);
     $player_class = mysql_real_escape_string($arrXml['PlayerInfos']['key'.$i]['class']);
     $player_level = mysql_real_escape_string($arrXml['PlayerInfos']['key'.$i]['level']);
-    $query_playerinfo = "INSERT INTO playerinfo (
-player_name ,
-player_race ,
-player_guild ,
-player_sex ,
-player_class ,
-player_level
+    $query_playerinfo = "INSERT INTO `playerinfo` (
+`player_name` ,
+`player_race` ,
+`player_guild` ,
+`player_sex` ,
+`player_class` ,
+`player_level`
 )
 VALUES (
 '".$player_name."', '".$player_race."', '".$player_guild."', '".$player_sex."', '".$player_class."','".$player_level."');";
 
 //remove_this  mysql_query($query_playerinfo);
 }
+
+//Count the amount of bosses killed
 $number_bosskills = count($arrXml['BossKills']);
+//Run the for loop
 for($i = 1; $i <= $number_bosskills; $i++)
 {
     $boss_name = mysql_real_escape_string($arrXml['BossKills']['key'.$i]['name']);
     $boss_time = mysql_real_escape_string($arrXml['BossKills']['key'.$i]['time']);
-    $str = $boss_time;
-    if (($timestamp = strtotime($boss_time)) === false)
-        {
-            echo "The string ($str) is bogus";
-        }
-    else
-        {
-            $boss_time = date('Y-m-d H:i:s', $timestamp);
-        }
+    
+    $boss_time = timeparser($boss_time);
 
-    $query_bosskill = "INSERT INTO bosskil (
-    boss_name,
-    boss_time
+    $query_bosskill = "INSERT INTO `bosskil` (
+    `boss_name`,
+    `boss_time`,
+    `raid_key`
     )
     VALUES
     (
-       '".$boss_name."', '".$boss_time."' 
+       '".$boss_name."', '".$boss_time."', '".$raid_key."'
     );";
 
 //remove_this    mysql_query($query_bosskill);
@@ -114,35 +131,65 @@ for($i = 1; $i <= $number_bosskills; $i++)
     {
         $attendee_name = $arrXml['BossKills']['key'.$i]['attendees']['key'.$a]['name'];
         $attendee_name = mysql_real_escape_string($attendee_name);
-        $query_attendees = "INSERT INTO attendees (
-        boss_id,
-        player_name
+        $query_attendees = "INSERT INTO `attendees` (
+        `boss_id`,
+        `player_name`,
+        `raid_key`
         )
         VALUES
         (
-           ".$boss_id.", '".$attendee_name."'
+           ".$boss_id.", '".$attendee_name."', '".$raid_key."'
         );";
 //remove_this        mysql_query($query_attendees);
 
     }  
 }
 
+//count for the join loop
+$count_joined = count($arrXml['Join']);
+//Join for loop
+for($i = 1; $i <= $count_joined; $i++)
+    {
+        $player_name = mysql_real_escape_string($arrXml['Join']['key'.$i]['player']);
+        $join_time = mysql_real_escape_string($arrXml['Join']['key'.$i]['time']);
+        $join_time = timeparser($join_time);
+        
+        $query_joined = "INSERT INTO `join` (
+        `player_name`,
+        `join_time`,
+        `raid_key`
+        )
+        values
+        (
+            '".$player_name."','".$join_time."','".$raid_key."'
+        );";
+//remove_this    mysql_query($query_joined);
+    }
+
+//Count leave
+$count_leave = count($arrXml['Leave']);
+//Leave for loop
+for($i = 1; $i <= $count_leave; $i++)
+    {
+        $player_name = mysql_real_escape_string($arrXml['Leave']['key'.$i]['player']);
+        $leave_time = mysql_real_escape_string($arrXml['Leave']['key'.$i]['player']);
+        $leave_time = timeparser($join_time);
+        
+        $query_leave = "INSERT INTO `leave` (
+            `player_name`,
+            `leave_time`,
+            `raid_key`
+        )
+        values
+        (
+            '".$player_name."', '".$leave_time."','".$raid_key."'
+        );";
+
+//remove_this   mysql_query($query_leave);
+    }
+
 //echo "<hr />";
 echo "<pre>";
-    //echo "Player info";
-    //    print_r($arrXml['PlayerInfos']['key1']);
-    //echo "<hr />";
-    //echo "Boss kills";
-    //    print_r($arrXml['BossKills']);
-    //echo "<hr />";
-    //echo "Notes";
-    //    print_r($arrXml['note']);
-    echo "<hr />";
-    echo "Join";
-        print_r($arrXml['Join']['key1']);
-    echo "<hr />";
-    echo "Leave";
-        print_r($arrXml['Leave']['key1']);
     echo "<hr />";
     echo "Loot";
         print_r($arrXml['Loot']['key10']);
