@@ -188,6 +188,55 @@ for($i = 1; $i <= $count_leave; $i++)
 //remove_this   mysql_query($query_leave);
     }
 
+/*
+ LootArray
+(
+    [ItemName] => Kilt of Untreated Wounds
+    [ItemID] => 50990
+    [Icon] => inv_pants_cloth_34purple
+    [Class] => Armor
+    [SubClass] => Cloth
+    [Color] => ffa335ee
+    [Count] => 1
+    [Player] => Aierus
+    [Costs] => 0
+    [Time] => 03/17/10 15:55:21
+    [Zone] => Icecrown Citadel
+    [Boss] => Festergut
+    [Note] => Array
+        (
+        )
+
+)
+
+*/
+
+$count_loot = count($arrXml['Loot']);
+
+for($i = 1; $i <= $count_loot; $i++)
+    {
+        $itemname = mysql_real_escape_string($arrXml['Loot']['key'.$i]['ItemName']);
+        $itemid = mysql_real_escape_string($arrXml['Loot']['key'.$i]['ItemID']);
+        $icon = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Icon']);
+        $class = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Class']);
+        $subclass = mysql_real_escape_string($arrXml['Loot']['key'.$i]['SubClass']);
+        $color = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Color']);
+        $count = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Count']);
+        $player = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Player']);
+        $costs = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Costs']);
+        $time = timeparser($arrXml['Loot']['key'.$i]['Time']);
+        $zone = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Zone']);
+        $boss = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Boss']);
+
+        $check_itemid_query = "SELECT itemid FROM loot WHERE itemid = '".$itemid."';";
+        $check_itemid = mysql_num_rows(mysql_query($check_itemid_query));
+        if($check_itemid == 0)
+        {
+            $add_item_query("STILL_NEED_TO_ADD");
+        }
+        
+    }
+
 //echo "<hr />";
 echo "<pre>";
     echo "<hr />";
