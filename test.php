@@ -27,7 +27,6 @@ $dbdatabase     =       'raidtracker';              //mysql database in where th
                          }
              }
      }
-
 //This function will parse the XML data into a nice big array
 function objectsIntoArray($arrObjData, $arrSkipIndices = array())
 {
@@ -188,28 +187,6 @@ for($i = 1; $i <= $count_leave; $i++)
 //remove_this   mysql_query($query_leave);
     }
 
-/*
- LootArray
-(
-    [ItemName] => Kilt of Untreated Wounds
-    [ItemID] => 50990
-    [Icon] => inv_pants_cloth_34purple
-    [Class] => Armor
-    [SubClass] => Cloth
-    [Color] => ffa335ee
-    [Count] => 1
-    [Player] => Aierus
-    [Costs] => 0
-    [Time] => 03/17/10 15:55:21
-    [Zone] => Icecrown Citadel
-    [Boss] => Festergut
-    [Note] => Array
-        (
-        )
-
-)
-
-*/
 
 $count_loot = count($arrXml['Loot']);
 
@@ -229,12 +206,28 @@ for($i = 1; $i <= $count_loot; $i++)
         $boss = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Boss']);
 
         $check_itemid_query = "SELECT itemid FROM loot WHERE itemid = '".$itemid."';";
-        $check_itemid = mysql_num_rows(mysql_query($check_itemid_query));
+        echo $check_itemid_query;
+        echo "<br />";
+        mysql_query($check_itemid_query);
+        $check_itemid = mysql_affected_rows();
+        var_dump($check_itemid);
+        echo "<br />";
         if($check_itemid == 0)
         {
-            $add_item_query("STILL_NEED_TO_ADD");
+            $add_item_query = "INSERT INTO `loot` (
+                `itemname`,
+                `itemid`,
+                `icon`,
+                `class`,
+                `subclass`,
+                `color`,
+                `zone`,
+                `boss`
+            ) values (
+                '".$itemname."', '".$itemid."', '".$icon."', '".$class."', '".$subclass."', '".$color."', '".$zone."', '".$boss."'
+            );";
+        mysql_query($add_item_query);
         }
-        
     }
 
 //echo "<hr />";
