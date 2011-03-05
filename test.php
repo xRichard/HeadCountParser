@@ -206,12 +206,11 @@ for($i = 1; $i <= $count_loot; $i++)
         $boss = mysql_real_escape_string($arrXml['Loot']['key'.$i]['Boss']);
 
         $check_itemid_query = "SELECT itemid FROM loot WHERE itemid = '".$itemid."';";
-        echo $check_itemid_query;
-        echo "<br />";
+
         mysql_query($check_itemid_query);
         $check_itemid = mysql_affected_rows();
         var_dump($check_itemid);
-        echo "<br />";
+
         if($check_itemid == 0)
         {
             $add_item_query = "INSERT INTO `loot` (
