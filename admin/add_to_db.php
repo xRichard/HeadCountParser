@@ -1,7 +1,7 @@
 <?php
 require_once('functions.inc.php');
 
-$xmlUrl = "test2.xml"; // XML feed file/URL
+$xmlUrl = "temp/test2.xml"; // XML feed file/URL
 $xmlStr = file_get_contents($xmlUrl);
 $xmlObj = simplexml_load_string($xmlStr);
 $arrXml = objectsIntoArray($xmlObj);
