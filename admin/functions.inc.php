@@ -35,7 +35,7 @@ function db_connect()
  function objectsIntoArray($arrObjData, $arrSkipIndices = array())
     {
          $arrData = array();
-        if input is object, convert into array
+        //if input is object, convert into array()
         if (is_object($arrObjData)) 
             {
                  $arrObjData = get_object_vars($arrObjData);

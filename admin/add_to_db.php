@@ -1,6 +1,5 @@
 <?php
-require_once('functions.inc.php');
-
+include('functions.inc.php');
 $xmlUrl = "temp/test2.xml"; // XML feed file/URL
 $xmlStr = file_get_contents($xmlUrl);
 $xmlObj = simplexml_load_string($xmlStr);
@@ -15,6 +14,14 @@ $raid_key = timeparser($raid_key);
 
 //counting the number of players
 $number_players = count($arrXml['PlayerInfos']);
+
+$check_raid_key_query = "SELECT * FROM join WHERE 'raid_key' = '".$raid_key."';";
+$check_raid_key = mysql_query($check_raid_key_query);
+if(mysql_affected_rows() > 0)
+{
+    echo "Er is oude data gevonden";
+    exit();
+}
 //Run the for loop
 for($i = 1; $i <= $number_players; $i++)
 {
@@ -25,18 +32,25 @@ for($i = 1; $i <= $number_players; $i++)
     $player_sex = mysql_real_escape_string($arrXml['PlayerInfos']['key'.$i]['sex']);
     $player_class = mysql_real_escape_string($arrXml['PlayerInfos']['key'.$i]['class']);
     $player_level = mysql_real_escape_string($arrXml['PlayerInfos']['key'.$i]['level']);
-    $query_playerinfo = "INSERT INTO `playerinfo` (
-`player_name` ,
-`player_race` ,
-`player_guild` ,
-`player_sex` ,
-`player_class` ,
-`player_level`
-)
-VALUES (
-'".$player_name."', '".$player_race."', '".$player_guild."', '".$player_sex."', '".$player_class."','".$player_level."');";
-
-//remove_this  mysql_query($query_playerinfo);
+    $query_playerinfo = "INSERT INTO `playerinfo` 
+        (
+            `player_name` ,
+            `player_race` ,
+            `player_guild` ,
+            `player_sex` ,
+            `player_class` ,
+            `player_level`
+        )
+    VALUES 
+        (
+            '".$player_name."', 
+            '".$player_race."', 
+            '".$player_guild."', 
+            '".$player_sex."', 
+            '".$player_class."',
+            '".$player_level."'
+        );";
+mysql_query($query_playerinfo);
 }
 
 //Count the amount of bosses killed
@@ -59,7 +73,7 @@ for($i = 1; $i <= $number_bosskills; $i++)
        '".$boss_name."', '".$boss_time."', '".$raid_key."'
     );";
 
-//remove_this    mysql_query($query_bosskill);
+mysql_query($query_bosskill);
     $boss_id = mysql_insert_id();
     $attendees = count($arrXml['BossKills']['key'.$i]['attendees']);
     for($a = 1; $a <= $attendees; $a++)
@@ -75,7 +89,7 @@ for($i = 1; $i <= $number_bosskills; $i++)
         (
            ".$boss_id.", '".$attendee_name."', '".$raid_key."'
         );";
-//remove_this        mysql_query($query_attendees);
+mysql_query($query_attendees);
 
     }  
 }
@@ -98,7 +112,7 @@ for($i = 1; $i <= $count_joined; $i++)
         (
             '".$player_name."','".$join_time."','".$raid_key."'
         );";
-//remove_this    mysql_query($query_joined);
+mysql_query($query_joined);
     }
 
 //Count leave
@@ -120,7 +134,7 @@ for($i = 1; $i <= $count_leave; $i++)
             '".$player_name."', '".$leave_time."','".$raid_key."'
         );";
 
-//remove_this   mysql_query($query_leave);
+mysql_query($query_leave);
     }
 
 
@@ -161,7 +175,7 @@ for($i = 1; $i <= $count_loot; $i++)
             ) values (
                 '".$itemname."', '".$itemid."', '".$icon."', '".$class."', '".$subclass."', '".$color."', '".$zone."', '".$boss."'
             );";
-//remove_this        mysql_query($add_item_query);
+mysql_query($add_item_query);
         }
     }
 ?>
