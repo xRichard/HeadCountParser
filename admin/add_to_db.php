@@ -1,4 +1,5 @@
 <?php
+
 include('functions.inc.php');
 $xmlUrl = "temp/test2.xml"; // XML feed file/URL
 $xmlStr = file_get_contents($xmlUrl);
@@ -15,13 +16,28 @@ $raid_key = timeparser($raid_key);
 //counting the number of players
 $number_players = count($arrXml['PlayerInfos']);
 
-$check_raid_key_query = "SELECT * FROM join WHERE 'raid_key' = '".$raid_key."';";
-$check_raid_key = mysql_query($check_raid_key_query);
-if(mysql_affected_rows() > 0)
+//check too make sure we don't get double attendancy data in the database 
+//nobody likes double data :)
+$check_raid_key_query = "SELECT *
+    FROM `join`
+    WHERE `raid_key` = '".$raid_key."';";
+mysql_query($check_raid_key_query);
+$check_raid_key = mysql_affected_rows();
+
+if($check_raid_key > 0)
 {
-    echo "Er is oude data gevonden";
-    exit();
+//This part still needs more code but we will stick with this for now :)
+
+    echo "The raid key already exists - this is usually because you tried too upload old data again";
+    echo "<br />";
+
 }
+//seems the database didn't contain any raidkeys so going too dump all the 
+//crap into the database.
+else
+{
+
+
 //Run the for loop
 for($i = 1; $i <= $number_players; $i++)
 {
@@ -102,15 +118,17 @@ for($i = 1; $i <= $count_joined; $i++)
         $player_name = mysql_real_escape_string($arrXml['Join']['key'.$i]['player']);
         $join_time = mysql_real_escape_string($arrXml['Join']['key'.$i]['time']);
         $join_time = timeparser($join_time);
+        $raid_zone = mysql_real_escape_string($arrXml['Join']['zone'];
         
         $query_joined = "INSERT INTO `join` (
         `player_name`,
         `join_time`,
-        `raid_key`
+        `raid_key`,
+        `raid_zone`
         )
         values
         (
-            '".$player_name."','".$join_time."','".$raid_key."'
+            '".$player_name."','".$join_time."','".$raid_key."','".$raid_zone."'
         );";
 mysql_query($query_joined);
     }
@@ -178,4 +196,5 @@ for($i = 1; $i <= $count_loot; $i++)
 mysql_query($add_item_query);
         }
     }
+}
 ?>
